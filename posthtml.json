@@ -1,5 +1,5 @@
 {
-    "input": "src/html/*.html",
+    "input": ["src/html/*.html", "src/html/*.php"],
     "output": "www",
     "plugins": {
         "posthtml-modules": {

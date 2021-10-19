@@ -10,7 +10,7 @@
   </head>
   <body>
 
-  <img width="320" height="187" src="/images/logo.png" alt="Sample image" />
+  <img width="160" height="93" src="/images/logo.png" alt="Sample image" />
 
   <module href="/components/system-foot.html"></module>
   </body>

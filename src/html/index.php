@@ -2,16 +2,24 @@
 <!doctype html>
 <html lang="en" dir="ltr">
   <head>
-  <module href="/components/system-head.html"></module>
-  <meta name="description" content="Put your description here.">
+    <module href="/components/system-head.html"></module>
+    <meta name="description" content="Put your description here.">
 
-  <title>Page title</title>
-
+    <title>Static Site Template</title>
   </head>
+
   <body>
 
-  <img width="160" height="93" src="/images/logo.png" alt="Sample image" />
+    <div class="layout-page">
+      <module href="/components/page-header.html"></module>
 
-  <module href="/components/system-foot.html"></module>
+      <h1>Hello there</h1>
+      <p>Some content</p>
+
+    </div>
+
+    <module href="/components/main-menu.html"></module>
+
+  <module href="/components/system-foot.php"></module>
   </body>
 </html>

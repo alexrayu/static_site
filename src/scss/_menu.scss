@@ -19,36 +19,23 @@ body {
 }
 .menu-toggle {
   cursor: pointer;
-  float: right;
   font-size: 0.875rem;
   transition: all 0.3s ease-in-out;
-  &.open {
-    opacity: 0.5;
-  }
-}
-.menu-toggle-grippy {
   border-bottom: 5px solid #333;
   border-top: 5px solid #333;
-  float: left;
   line-height: 0;
-  margin-right: 1em;
   padding: 5px 0;
-  text-indent: -999em;
   width: 35px;
+  text-indent: -999em;
   &:after {
     background: #333;
     content: '';
     display: block;
     height: 5px;
   }
-}
-.menu-toggle-label {
-  float: left;
-  font-weight: 700;
-  height: 25px;
-  letter-spacing: 1px;
-  line-height: 25px;
-  text-transform: uppercase;
+  &.open {
+    opacity: 0.5;
+  }
 }
 .main-menu {
   background: #333;

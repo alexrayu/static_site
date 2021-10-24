@@ -1,3 +1,16 @@
 .page-header {
-  height: 72px;
+  background: #f0f0f0;
+  padding: $spacer * 2 0;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .slogan {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+.container {
+  padding: 0 $spacer;
 }

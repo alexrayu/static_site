@@ -1,4 +1,8 @@
 $panelWidth: 250px;
+$panelTextColor: #aaa;
+$panelLinkColor: #ccc;
+$panelLinkHover: #fff;
+
 
 body {
   margin: 0;
@@ -48,7 +52,7 @@ body {
 }
 .main-menu {
   background: #333;
-  color: #666;
+  color: $panelTextColor;
   font-size: 0.875rem;
   position: fixed;
   right: -$panelWidth;
@@ -57,29 +61,29 @@ body {
   width: $panelWidth;
   transition: right .3s ease-in-out;
   a {
-    color: #999;
+    color: $panelLinkColor;
     transition: color 0.3s ease-out;
     &:hover {
-      color: #333;
+      color: $panelLinkHover;
     }
   }
 }
 .menu-close {
-  color: #666;
+  color: $panelLinkColor;
   cursor: pointer;
   position: absolute;
   right: 20px;
   top: 3.7em;
   transition: color 0.3s ease-in-out;
   &:hover {
-    color: #333;
+    color: $panelLinkHover;
   }
 }
 .content {
   padding: 3.65em 10%;
 }
 .nav {
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #888;
   border-bottom: 1px solid rgba(#666, 0.25);
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;

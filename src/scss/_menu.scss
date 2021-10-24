@@ -2,6 +2,7 @@ $panelWidth: 250px;
 $panelTextColor: #aaa;
 $panelLinkColor: #ccc;
 $panelLinkHover: #eee;
+$panelLine: 2px groove rgba(#666, 0.25);
 
 
 body {
@@ -10,6 +11,7 @@ body {
   position: relative;
   min-height: 100vh;
   transition: left .3s ease-in-out;
+  font-family: sans-serif;
   &.menu-open {
     left: -$panelWidth;
     .main-menu {
@@ -19,13 +21,13 @@ body {
 }
 .menu-toggle {
   cursor: pointer;
-  font-size: 0.875rem;
   transition: all 0.3s ease-in-out;
-  border-bottom: 5px solid #333;
-  border-top: 5px solid #333;
+  border-bottom: 4px solid #333;
+  border-top: 4px solid #333;
   line-height: 0;
-  padding: 5px 0;
-  width: 35px;
+  padding: 4px 0;
+  width: 26px;
+  min-width: 26px;
   text-indent: -999em;
   &:after {
     background: #333;
@@ -38,6 +40,7 @@ body {
   }
 }
 .main-menu {
+  font-family: sans-serif;
   background: #333;
   color: $panelTextColor;
   font-size: 0.875rem;
@@ -47,6 +50,26 @@ body {
   bottom: 0;
   width: $panelWidth;
   transition: right .3s ease-in-out;
+  .menu-header {
+    display: flex;
+    margin-bottom: $spacer;
+    border-bottom: $panelLine;
+    padding-bottom: $spacer;
+    h2 {
+      font-weight: normal;
+      margin: 0;
+      flex-grow: 1;
+    }
+    .menu-close {
+      color: $panelLinkColor;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+      font-size: 1.5em;
+      &:hover {
+        color: $panelLinkHover;
+      }
+    }
+  }
   a {
     color: $panelLinkColor;
     transition: color 0.3s ease-out;
@@ -54,59 +77,42 @@ body {
       color: $panelLinkHover;
     }
   }
-}
-.menu-close {
-  color: $panelLinkColor;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 3.7em;
-  transition: color 0.3s ease-in-out;
-  &:hover {
-    color: $panelLinkHover;
+  .content {
+    padding: $spacer $spacer $spacer $spacer * 2;
   }
-}
-.content {
-  padding: 3.65em 10%;
-}
-.nav {
-  border-bottom: 1px solid #888;
-  border-bottom: 1px solid rgba(#666, 0.25);
-  margin-bottom: 1.5em;
-  padding-bottom: 1.5em;
-  text-transform: uppercase;
-  h3 {
-    letter-spacing: 1px;
-    margin-bottom: 1em;
-  }
-  ul {
-    list-style: none;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    padding: 0.25em 0;
-  }
-}
-.text {
-  line-height: 1.5;
-  p {
+  .nav {
+    border-bottom: $panelLine;
     margin-bottom: 1.5em;
-    &:last-child {
-      margin-bottom: 0;
+    padding-bottom: 1.5em;
+    text-transform: uppercase;
+    h3 {
+      letter-spacing: 1px;
+      margin-bottom: 1em;
+    }
+    ul {
+      list-style: none;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      padding: 0.25em 0;
     }
   }
-}
-.credits {
-  line-height: 1.5;
-  span {
-    display: block;
-    margin-bottom: 0.15em;
+  .text {
+    line-height: 1.5;
+    p {
+      margin-bottom: 1.5em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
-}
-.layout-page {
-  left: 0;
-  top: 0;
-  width: 100%;
+  .credits {
+    line-height: 1.5;
+    span {
+      display: block;
+      margin-bottom: 0.15em;
+    }
+  }
 }

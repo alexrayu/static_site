@@ -5,7 +5,7 @@
     <module href="/components/system-head.html"></module>
     <meta name="description" content="Put your description here.">
 
-    <title>Static Site Template</title>
+    <title>Company Name | Company slogan</title>
   </head>
 
   <body>
@@ -13,8 +13,10 @@
     <div class="layout-page">
       <module href="/components/page-header.html"></module>
 
-      <h1>Hello there</h1>
-      <p>Some content</p>
+      <div class="container">
+        <h1>Company Name</h1>
+        <p>Some content. A <a href="#">link</a>.</p>
+      </div>
 
     </div>
 

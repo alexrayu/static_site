@@ -1,0 +1,37 @@
+
+// Layout generics.
+.layout-page {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.container {
+  padding: 0 $spacer;
+}
+
+// Globals.
+// body {} see _menu.scss
+html, body {
+  font-size: $txtNormal;
+}
+
+// Page header.
+.page-header {
+  background: #f0f0f0;
+  padding: $spacer * 1.5 0;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .logo {
+    font-size: 2em;
+  }
+  .slogan {
+    flex-grow: 1;
+    font-size: $txtSmaller;
+    text-align: left;
+    margin: 0 1.5em;
+    font-style: italic;
+  }
+}

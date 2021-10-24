@@ -6,26 +6,27 @@
     "css:lint": "stylelint src/scss/*.scss --syntax scss",
     "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
     "build:js": "webpack --mode=production",
-    "build:html": "posthtml -c posthtml.json",
+    "build:php": "copyfiles -u 2 src/php/index.php www && copyfiles -u 2 src/php/**/* www",
     "build:images": "imagemin src/images/**/* --out-dir=www/images",
     "build:icons": "imagemin src/icons/**/* --out-dir=www/icons",
-    "build": "run-s build:*"
+    "build": "rimraf www/*; run-s build:*"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.8.4",
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
+    "fs-extra": "^10.0.0",
     "htmlnano": "^1.1.1",
     "imagemin-cli": "^7.0.0",
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^6.1.0",
     "postcss-cli": "^7.1.0",
-    "posthtml": "^0.12.0",
-    "posthtml-cli": "^0.5.2",
-    "posthtml-modules": "^0.4.2",
     "stylelint": "^13.0.0",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1"
   }
 }

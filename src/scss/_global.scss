@@ -1,4 +1,8 @@
-
+// Globals.
+// body {} see _menu.scss
+html, body {
+  font-size: $txtNormal;
+}
 img {
   display: block;
   max-width: 100%;

@@ -8,11 +8,15 @@
 .container {
   padding: 0 $spacer;
 }
+.flex-grow {
+  flex-grow: 1;
+}
 
-// Globals.
-// body {} see _menu.scss
-html, body {
-  font-size: $txtNormal;
+// Main page layout.
+.layout-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 // Page header.
@@ -34,4 +38,11 @@ html, body {
     margin: 0 1.5em;
     font-style: italic;
   }
+}
+
+// Page footer.
+.page-footer {
+  background: #f0f0f0;
+  padding: $spacer * 1.5 0;
+  text-align: center;
 }

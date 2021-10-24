@@ -13,7 +13,7 @@
       <p>Text.</p>
     </div>
     <div class="credits">
-      <span>Credits</span>
+      <span>Credits.</span>
     </div>
   </div>
 </div>

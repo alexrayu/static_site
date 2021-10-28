@@ -30,6 +30,7 @@
   }
   .logo {
     font-size: 2em;
+    flex-shrink: 0;
   }
   .slogan {
     flex-grow: 1;
